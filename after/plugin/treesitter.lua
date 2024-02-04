@@ -1,6 +1,6 @@
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
-    ensure_installed = { "javascript", "typescript", "c", "lua", "ruby", "python", "go" },
+    ensure_installed = { "javascript", "typescript", "c", "lua", "ruby", "python", "go", "html" },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
@@ -20,5 +20,16 @@ require 'nvim-treesitter.configs'.setup {
         -- Using this option may slow down your editor, and you may see some duplicate highlights.
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
+    },
+
+    languages = {
+        html = {
+            -- Use the HTML parser for HTML files
+            enable = { "html" },
+        },
+        eruby = {
+            -- Use the Ruby parser for Ruby files
+            enable = { "ruby" },
+        },
     },
 }
