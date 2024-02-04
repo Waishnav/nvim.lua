@@ -9,9 +9,7 @@ vim.keymap.set('n', '<leader>s', function()
 end)
 
 -- global live search
-vim.keymap.set('n', '<leader>ls', function()
-    builtin.live_grep({ search = vim.fn.input("Grep > ") });
-end)
+vim.keymap.set('n', '<leader>ls', builtin.live_grep, {})
 
 -- list project buffer files
 vim.keymap.set('n', '<leader>b', builtin.buffers, {})
