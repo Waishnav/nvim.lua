@@ -1,18 +1,18 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>vv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>vp", vim.cmd.Ex)
 
 -- multiple line selection and their movements in visual mode
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("x", "<C-u>", ":set virtualedit=all<CR>")
-vim.keymap.set("x", "<C-u>p",
-    ":s`>'\\%V.*`&<C-r>=strpart(getregtype(), 0, 1) ==# 'V' ? submatch(0) : submatch(1)<CR>`g<CR>")
+--vim.keymap.set("x", "<C-u>", ":set virtualedit=all<CR>")
+--vim.keymap.set("x", "<C-u>p",
+--    ":s`>'\\%V.*`&<C-r>=strpart(getregtype(), 0, 1) ==# 'V' ? submatch(0) : submatch(1)<CR>`g<CR>")
 
 --
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
--- vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -81,5 +81,4 @@ vim.keymap.set("n", "<A-k>", "<C-w>k")
 vim.keymap.set("n", "<A-j>", "<C-w>j")
 
 -- find mode in visual mode
-vim.keymap.set("x", "<leader>f", "y/<C-R>=escape(@\", '/')<CR><CR>", { noremap = false, silent = false})
-
+vim.keymap.set("x", "<leader>f", "y/<C-R>=escape(@\", '/')<CR><CR>", { noremap = false, silent = false })
