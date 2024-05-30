@@ -8,7 +8,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.list = true
-vim.opt.listchars:append({ tab = '▸ ', trail = '·', nbsp = '␣' })
+vim.opt.listchars:append({ tab = '• ', trail = '·', nbsp = '␣' })
 
 vim.opt.wrap = false
 
@@ -33,3 +33,4 @@ vim.opt.colorcolumn = "80"
 
 -- netrw bufsettings
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
+
